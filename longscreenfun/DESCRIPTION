@@ -1,0 +1,44 @@
+Package: longscreenfun
+Type: Package
+Title: Functions for simulations for longitudinal biomarker screening
+Version: 0.1.0
+Author: Siddharth Roy [aut, cre]
+Maintainer: Siddharth Roy <siddharth.roy@nih.gov>
+Authors@R: c(
+    person(
+      "Siddharth", "Roy",
+      email = "siddharth.roy@nih.gov",
+      role = c("aut", "cre")
+    )
+  )
+Description: Simulation, fitting, and screening helpers for longitudinal
+    biomarker screening studies.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    JM
+Imports:
+    dplyr,
+    lme4,
+    magrittr,
+    nlme,
+    numDeriv,
+    Rcpp,
+    RcppParallel,
+    rlang,
+    stats,
+    stringr,
+    survival,
+    tibble,
+    tidyr,
+    utils
+Suggests:
+    testthat
+LinkingTo:
+    BH,
+    Rcpp,
+    RcppEigen,
+    RcppParallel,
+    StanHeaders
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0

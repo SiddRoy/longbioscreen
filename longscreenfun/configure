@@ -1,0 +1,17 @@
+#!/bin/sh
+
+RSCRIPT="${R_HOME}/bin/Rscript"
+
+RCPP_PARALLEL_LIBS=`"${RSCRIPT}" -e 'cat(RcppParallel::RcppParallelLibs())'`
+RCPP_PARALLEL_LIBDIR=`"${RSCRIPT}" -e 'cat(system.file("lib", package = "RcppParallel"))'`
+RPATH_FLAG=""
+
+if test -n "${RCPP_PARALLEL_LIBDIR}"; then
+  RPATH_FLAG="-Wl,-rpath,${RCPP_PARALLEL_LIBDIR}"
+fi
+
+cat > src/Makevars <<EOF
+CXX_STD = CXX17
+PKG_CXXFLAGS = -DRCPP_PARALLEL_USE_TBB=1
+PKG_LIBS = ${RCPP_PARALLEL_LIBS} ${RPATH_FLAG}
+EOF

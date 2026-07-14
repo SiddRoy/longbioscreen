@@ -1,0 +1,12 @@
+globalVariables(c(
+  "del",
+  "i",
+  "Ti",
+  "tim",
+  "tim2",
+  "Tobs",
+  "tx",
+  "Xcc",
+  "y",
+  "y1"
+))

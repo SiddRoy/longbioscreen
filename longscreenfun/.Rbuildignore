@@ -1,0 +1,7 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.Rhistory$
+^Makefile$
+^build_pkg\.sbatch$
+^.*\.tar\.gz$
+^src/Makevars$

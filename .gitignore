@@ -1,0 +1,33 @@
+/scratch/
+output/
+
+# Simulation and cluster outputs
+**/out/
+**/out2/
+*.rda
+*.rds
+*.RData
+*.sbatch
+slurm-*.out
+*.err
+
+# R and package artifacts
+.Rproj.user/
+.Rhistory
+.Ruserdata
+*.Rproj
+*.Rcheck/
+*.tar.gz
+*.html
+Makefile
+
+longscreenfun/src/Makevars
+longscreenfun/src/*.o
+longscreenfun/src/*.so
+longscreenfun/src/*.dll
+longscreenfun/src/symbols.rds
+
+.sync.conf
+README_git.md
+fun.R
+/dev/
