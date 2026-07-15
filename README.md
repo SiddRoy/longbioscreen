@@ -31,16 +31,15 @@ To replicate the results, please use the following steps:
 
 ## Running the simulations
 
-Each simulation script determines its own directory, so it can be run from
-the repository root regardless of the repository folder name. For each `aid`,
-run both `taskid=1` and `taskid=2`. The following replicates the conditional
+For each `aid`, run both `taskid=1` and `taskid=2`. The following replicates the conditional
 model simulations from Section 3.4.
  
 ```bash
+cd 34_CM
 for i in {1..250}
 do
-  Rscript 34_CM/CMsim.R --aid=$i --taskid=1 &
-  Rscript 34_CM/CMsim.R --aid=$i --taskid=2 &
+  Rscript CMsim.R --aid=$i --taskid=1 &
+  Rscript CMsim.R --aid=$i --taskid=2 &
   wait
 done   
 ```
